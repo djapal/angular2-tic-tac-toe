@@ -8,7 +8,6 @@ import {CellComponent} from "./cell.component";
         <div style="text-align:center">
             <h1>Angular 2 Tic Tac Toe</h1>
             <h2 [class.gameover]="gameOver">{{result}}</h2>
-            <button (click)="resetBoard()">Reset</button>
             <table style="margin-left: auto; margin-right: auto">
                 <tr *ngFor="#x of [0,1,2]">
                     <td *ngFor="#y of [0,1,2]">
