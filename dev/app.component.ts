@@ -11,7 +11,7 @@ import {CellComponent} from "./cell.component";
             <table style="margin-left: auto; margin-right: auto">
                 <tr *ngFor="#x of [0,1,2]">
                     <td *ngFor="#y of [0,1,2]">
-                        <cell [cell-x]="x" [cell-y]="y"></cell>
+                        <cell [cell-x]="x" [cell-y]="y" (makeMove)="checkMove($event)"></cell>
                     </td>
                 </tr>         
             </table>
@@ -30,6 +30,23 @@ export class AppComponent implements OnInit {
 
     ngOnInit():any {
         this.resetBoard();
+    }
+
+    checkMove(cellComponent: CellComponent) {
+        if (cellComponent.choice != -1) {
+            this.result = "Wrong move!";
+        } else {
+            cellComponent.choice = this.currentActionIndex % 2;
+            this.currentActionIndex++;
+            this.positions[ cellComponent.x ] [ cellComponent.y ] = cellComponent.choice;
+            if (cellComponent.choice % 2 == 0) {
+                this.result = "O's turn";
+            } else {
+                this.result = "X's turn";
+            }
+        }
+
+        this.checkTTT();
     }
 
     resetBoard() {
