@@ -42,10 +42,6 @@ gulp.src(assetsDev + 'scss/*.scss')
     .pipe(ext_replace('.css'))
     .pipe(gulp.dest(assetsProd + 'css/'));
 
-/*gulp.watch(appDev + '**!/!*.ts', ['build-ts']);
-gulp.watch(assetsDev + 'scss/!**!/!*.scss', ['build-css']);
-gulp.watch(assetsDev + 'img/!*', ['build-img']);*/
-
 http.createServer( function(req, res) {
 
     var now = new Date();
@@ -69,7 +65,6 @@ http.createServer( function(req, res) {
         localPath += filename;
         fs.exists(localPath, function(exists) {
             if(exists) {
-                console.log("Serving file: " + localPath);
                 getFile(localPath, res, ext);
             } else {
                 console.log("File not found: " + localPath);
