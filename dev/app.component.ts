@@ -1,5 +1,5 @@
-import {Component, Injectable} from 'angular2/core';
-import {OnInit} from "angular2/core";
+import {Component, Injectable} from '@angular/core';
+import {OnInit} from "@angular/core";
 import {CellComponent} from "./cell.component";
 
 @Component({

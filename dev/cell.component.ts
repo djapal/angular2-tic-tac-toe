@@ -1,5 +1,5 @@
-import {Component, Input, Inject, forwardRef, Output, EventEmitter} from 'angular2/core';
-import {OnInit} from "angular2/core";
+import {Component, Input, Inject, forwardRef, Output, EventEmitter} from '@angular/core';
+import {OnInit} from "@angular/core";
 import {AppComponent} from "./app.component";
 
 @Component({

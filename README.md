@@ -8,8 +8,8 @@ A simple tic tac toe game in angular 2.
 ```
 npm install
 ```
-2: Start server (includes auto refreshing) and gulp watcher
+2: Start server (server.js file OpenShift-compatible)
 ```
-npm start
+node server.js
 ```
 =======
