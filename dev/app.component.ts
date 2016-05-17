@@ -9,8 +9,8 @@ import {CellComponent} from "./cell.component";
             <h1>Angular 2 Tic Tac Toe</h1>
             <h2 [class.gameover]="gameOver">{{result}}</h2>
             <table style="margin-left: auto; margin-right: auto">
-                <tr *ngFor="#x of [0,1,2]">
-                    <td *ngFor="#y of [0,1,2]">
+                <tr *ngFor="let x of [0,1,2]">
+                    <td *ngFor="let y of [0,1,2]">
                         <cell [cell-x]="x" [cell-y]="y" (makeMove)="checkMove($event)"></cell>
                     </td>
                 </tr>         
