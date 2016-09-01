@@ -1,22 +1,10 @@
-import {Component, Injectable} from '@angular/core';
+import {Component} from '@angular/core';
 import {OnInit} from "@angular/core";
 import {CellComponent} from "./cell.component";
 
 @Component({
     selector: 'my-app',
-    template: `
-        <div style="text-align:center">
-            <h1>Angular 2 Tic Tac Toe</h1>
-            <h2 [class.gameover]="gameOver">{{result}}</h2>
-            <table style="margin-left: auto; margin-right: auto">
-                <tr *ngFor="let x of [0,1,2]">
-                    <td *ngFor="let y of [0,1,2]">
-                        <cell [cell-x]="x" [cell-y]="y" (makeMove)="checkMove($event)"></cell>
-                    </td>
-                </tr>         
-            </table>
-        </div>
-    `,
+    templateUrl: 'app/app.component.html',
     directives: [CellComponent]
 })
 
