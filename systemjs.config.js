@@ -1,14 +1,8 @@
-/**
- * PLUNKER VERSION (based on systemjs.config.js in angular.io)
- * System configuration for Angular 2 samples
- * Adjust as necessary for your application needs.
- */
 (function(global) {
 
   var ngVer = '@2.0.0-rc.6'; // lock in the angular package version; do not let it float to current!
   var routerVer = '@3.0.0-rc.2'; // lock router version
   var formsVer = '@0.3.0'; // lock forms version
-  var routerDeprecatedVer = '@2.0.0-rc.2';
 
   //map tells the System loader where to look for things
   var map = {
@@ -25,7 +19,7 @@
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
-    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' }
   };
 
   var ngPackageNames = [
@@ -35,7 +29,7 @@
     'http',
     'platform-browser',
     'platform-browser-dynamic',
-    'upgrade',
+    'upgrade'
   ];
 
   // Add map entries for each angular package
