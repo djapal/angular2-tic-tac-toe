@@ -4,8 +4,7 @@ import {CellComponent} from "./cell.component";
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/app.component.html',
-    directives: [CellComponent]
+    templateUrl: 'app/app.component.html'
 })
 
 export class AppComponent implements OnInit {
