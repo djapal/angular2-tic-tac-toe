@@ -1,7 +1,7 @@
 (function(global) {
 
-  var ngVer = '@2.0.0-rc.6'; // lock in the angular package version; do not let it float to current!
-  var routerVer = '@3.0.0-rc.2'; // lock router version
+  var ngVer = '@2.4.5'; // lock in the angular package version; do not let it float to current!
+  var routerVer = '@3.4.5'; // lock router version
   var formsVer = '@0.3.0'; // lock forms version
 
   //map tells the System loader where to look for things

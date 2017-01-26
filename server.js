@@ -27,7 +27,7 @@ var app = express();
 
 gulp.src(appDev + '**/*.ts')
     .pipe(sourcemaps.init())
-    .pipe(typescript(tsProject))
+    .pipe(tsProject())
     .pipe(sourcemaps.write())
     .pipe(jsuglify())
     .pipe(gulp.dest(appProd));
