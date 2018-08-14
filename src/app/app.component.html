@@ -1,0 +1,11 @@
+<div style="text-align:center">
+  <h2>Angular 6.1 Tic Tac Toe</h2>
+  <h3 [class.gameover]="gameOver">{{result}}</h3>
+  <table style="margin-left: auto; margin-right: auto">
+    <tr *ngFor="let x of [0,1,2]">
+      <td *ngFor="let y of [0,1,2]">
+        <cell [cell-x]="x" [cell-y]="y" (makeMove)="checkMove($event)"></cell>
+      </td>
+    </tr>
+  </table>
+</div>

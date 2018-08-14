@@ -1,10 +1,6 @@
-$blue: #1ebcc5;
-
 body, html {
-  padding: 32px;
-  margin: 32px;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   background-color: black !important;
   color: grey;
 }
@@ -13,6 +9,7 @@ body, html {
   width: 10%;
   float: left;
 }
+
 @media (min-width: 768px) {
   .col-sm-15 {
     width: 10%;
@@ -42,7 +39,7 @@ table {
 }
 
 table td {
-  font-size: 12em;
+  font-size: 22px;
   border: 10px solid grey;
   padding: 20px;
 }
@@ -75,10 +72,12 @@ table tr th:last-child {
   border-radius: 50%;
   border: 20px solid cornflowerblue;
 }
+
 .close {
   width: 140px;
   height: 140px;
 }
+
 .close::before, .close::after {
   content: '';
   display: inline-block;
@@ -86,16 +85,16 @@ table tr th:last-child {
   width: 100%;
   background: green;
 }
+
 .close::before {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   margin-top: 50px;
 }
+
 .close::after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin-top: -20px;
+  transform: translate(0,-26px) rotate(-45deg);
 }
+
 .gameover {
   color: green;
 }
